@@ -18,11 +18,19 @@ repositories {
 dependencies {
     // Use JUnit Jupiter for testing.
     testImplementation(libs.junit.jupiter)
+    testCompileOnly("org.projectlombok:lombok:1.18.30")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.30")
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
     // This dependency is used by the application.
     implementation(libs.guava)
+    implementation("org.slf4j:slf4j-api:2.0.9")
+    implementation("ch.qos.logback:logback-classic:1.4.14")
+    compileOnly("org.projectlombok:lombok:1.18.30")
+    annotationProcessor("org.projectlombok:lombok:1.18.30")
+
+
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
