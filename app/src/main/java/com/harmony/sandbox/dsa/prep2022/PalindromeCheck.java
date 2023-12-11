@@ -1,4 +1,4 @@
-package com.harmony.sandbox.dsa.legacy;
+package com.harmony.sandbox.dsa.prep2022;
 
 class PalindromeCheck {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.harmony.sandbox.dsa.legacy;
+package com.harmony.sandbox.dsa.prep2022;
 
 import java.util.List;
 import java.util.ArrayList;

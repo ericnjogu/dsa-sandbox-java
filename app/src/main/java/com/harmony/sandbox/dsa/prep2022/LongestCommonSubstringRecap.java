@@ -1,4 +1,4 @@
-package com.harmony.sandbox.dsa.legacy;//import java.util.StringBuilder;
+package com.harmony.sandbox.dsa.prep2022;//import java.util.StringBuilder;
 
 class LongestCommonSubstringRecap {
 	String match(String a, String b) {

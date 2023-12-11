@@ -1,4 +1,4 @@
-package com.harmony.sandbox.dsa.legacy;
+package com.harmony.sandbox.dsa.prep2022;
 
 class LongestSubstringMatch {
 	String match(String one, String two) {

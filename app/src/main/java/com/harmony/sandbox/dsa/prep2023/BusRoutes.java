@@ -1,4 +1,4 @@
-package com.harmony.sandbox.dsa;
+package com.harmony.sandbox.dsa.prep2023;
 
 import lombok.extern.slf4j.Slf4j;
 

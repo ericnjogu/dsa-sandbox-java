@@ -1,4 +1,4 @@
-package com.harmony.sandbox.dsa.legacy;
+package com.harmony.sandbox.dsa.prep2022;
 
 public class BinarySearch {
  boolean binarySearch(int[] numbers, int target, int start, int stop) {

@@ -1,4 +1,4 @@
-package com.harmony.sandbox.dsa.legacy;
+package com.harmony.sandbox.dsa.prep2022;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,5 +50,5 @@ class BinaryTree {
 		
 	}
 
-	record Node(Integer data, com.harmony.sandbox.dsa.legacy.BinaryTree.Node left, com.harmony.sandbox.dsa.legacy.BinaryTree.Node right) {}
+	record Node(Integer data, com.harmony.sandbox.dsa.prep2022.BinaryTree.Node left, com.harmony.sandbox.dsa.prep2022.BinaryTree.Node right) {}
 }
