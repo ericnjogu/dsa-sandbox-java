@@ -22,7 +22,7 @@ class BfsTest {
     @Test
     void bfs() {
 
-        assertEquals(List.of("a", "b", "d"), bfs.bfs(TestData.getStructyGraph_01(), "a", "d"));
+        assertEquals(List.of("a", "b", "d"), bfs.bfs(TestData.getStructyGraph_01(), "a"/*, "d"*/));
     }
 
     @Test
@@ -36,6 +36,6 @@ class BfsTest {
                 "e", List.of("b"),
                 "end", Collections.emptyList()
         );
-        assertEquals(List.of("start", "a", "b", "end"), bfs.bfs(graph, "start", "end"));
+        assertEquals(List.of("start", "a", "b", "end"), bfs.bfs(graph, "start"/*, "end"*/));
     }
 }
