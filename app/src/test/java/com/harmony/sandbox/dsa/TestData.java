@@ -9,10 +9,11 @@ public class TestData {
         return Map.of(
                 "a", List.of("c", "b"),
                 "c", List.of("e"),
-                "e", List.of("b"),
+                //"e", List.of("b"),
                 "b", List.of("d"),
-                "f", List.of("d"),
-                "d", Collections.emptyList()
+                "d", List.of("f"),
+                "f", Collections.emptyList(),
+                "e", Collections.emptyList()
         );
     }
 }
