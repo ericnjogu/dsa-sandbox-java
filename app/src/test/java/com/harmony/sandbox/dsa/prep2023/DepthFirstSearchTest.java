@@ -8,17 +8,17 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DfsTest {
+class DepthFirstSearchTest {
 
-    private Dfs dfs;
+    private DepthFirstSearch dfs;
 
     @BeforeEach
     void setUp() {
-        dfs = new Dfs();
+        dfs = new DepthFirstSearch();
     }
 
     @Test
     void dfs() {
-        assertEquals(List.of("a", "b", "d"), dfs.search(TestData.getStructyGraph_01(), "a"));
+        assertEquals(List.of("a", "b", "d", "c", "e"), dfs.search(TestData.getStructyGraph_01(), "a"));
     }
 }

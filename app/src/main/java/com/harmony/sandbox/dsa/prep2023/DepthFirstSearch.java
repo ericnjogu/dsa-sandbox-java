@@ -12,7 +12,7 @@ import java.util.Map;
  * depth first search
  */
 @Slf4j
-public class Dfs {
+public class DepthFirstSearch {
     List<String> search(Map<String, List<String>> graph, String start) {
         // initialize visited, stack
         LinkedList<String> visited = new LinkedList<>();
