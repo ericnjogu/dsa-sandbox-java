@@ -2,11 +2,14 @@ package com.harmony.sandbox.dsa.prep2023;
 
 import lombok.extern.slf4j.Slf4j;
 
-//import java.util.HashMap;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
+import java.util.Set;
 
 @Slf4j
 public class BreadthFirstSearch {
@@ -42,5 +45,40 @@ public class BreadthFirstSearch {
             //}
         }
         return visited;
+    }
+
+    public int connectedComponentsCount(Map<Integer, List<Integer>> graph) {
+        /*
+        create a set of nodes
+        initialise a counter
+        Iterate over the nodes and use each node as the starting point for a BFS
+        while visiting the nodes in the BFS, delete them from the set
+        */
+        Set<Integer> nodes = new HashSet<>(graph.keySet());
+        int count = 0;
+        while (!nodes.isEmpty()) {
+            Deque<Integer> que = new ArrayDeque<>();
+            Integer node = nodes.iterator().next();
+            System.out.println("iterating over node " + node);
+            System.out.println("nodes: " + nodes);
+            que.add(node);
+            Set<Integer> visited = new HashSet<>();
+            while (! que.isEmpty()) {
+                Integer current = que.poll();
+                System.out.println("polled " + current);
+                if (visited.contains(current)) {
+                    System.out.println("skipping visited " + current);
+                } else {
+                    que.addAll(graph.get(current));
+                    visited.add(current);
+                }
+            }
+            System.out.println("visited: " + visited);
+            nodes.removeAll(visited);
+            count++;
+        }
+
+        System.out.println("Returning count " + count);
+        return count;
     }
 }

@@ -38,4 +38,17 @@ class BreadthFirstSearchTest {
         );
         assertEquals(List.of("start", "a", "b", "end"), breadthFirstSearch.bfs(graph, "start"/*, "end"*/));
     }
+
+    @Test
+    void connectedComponentsCount_01() {
+        assertEquals(2, breadthFirstSearch.connectedComponentsCount(Map.of(
+                0, List.of(8, 1, 5),
+                1, List.of(0),
+                5, List.of(0, 8),
+                8, List.of(0, 5),
+                2, List.of(3, 4),
+                3, List.of(2, 4),
+                4, List.of(3, 2)
+        )));
+    }
 }
