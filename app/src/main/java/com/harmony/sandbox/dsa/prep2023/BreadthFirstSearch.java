@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Queue;
 
 @Slf4j
-public class Bfs {
+public class BreadthFirstSearch {
     List<String> bfs(Map<String, List<String>> graph, String start/*, String target*/) {
         /*
          * initialise a visited list

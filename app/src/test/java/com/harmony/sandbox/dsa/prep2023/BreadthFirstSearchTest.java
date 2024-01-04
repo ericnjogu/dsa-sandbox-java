@@ -10,19 +10,19 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BfsTest {
+class BreadthFirstSearchTest {
 
-    private Bfs bfs;
+    private BreadthFirstSearch breadthFirstSearch;
 
     @BeforeEach
     void setUp() {
-        bfs = new Bfs();
+        breadthFirstSearch = new BreadthFirstSearch();
     }
 
     @Test
     void bfs() {
 
-        assertEquals(List.of("a", "b", "d"), bfs.bfs(TestData.getStructyGraph_01(), "a"/*, "d"*/));
+        assertEquals(List.of("a", "b", "d"), breadthFirstSearch.bfs(TestData.getStructyGraph_01(), "a"/*, "d"*/));
     }
 
     @Test
@@ -36,6 +36,6 @@ class BfsTest {
                 "e", List.of("b"),
                 "end", Collections.emptyList()
         );
-        assertEquals(List.of("start", "a", "b", "end"), bfs.bfs(graph, "start"/*, "end"*/));
+        assertEquals(List.of("start", "a", "b", "end"), breadthFirstSearch.bfs(graph, "start"/*, "end"*/));
     }
 }
